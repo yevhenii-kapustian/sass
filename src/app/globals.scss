@@ -1,0 +1,129 @@
+@import '../styles/mixins';
+@import '../styles/variables';
+
+a, button {
+  text-decoration: none;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  @include flexcol;
+  margin: 0;
+  font-family: $font-monda;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+// Introduction
+
+.main__introduction {
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+// Category
+
+.category {
+  padding: $indent__base $indent__xxl;
+
+  &__title {
+    padding: $indent__xl;
+    font-size: $indent__l;
+    text-align: center;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: $indent__xl;
+
+    @include responsive__tablet-big {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  &__item {
+    width: 100%;
+    padding: $indent__xl;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: $indent__l;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    box-shadow: 0 0 20px 0px #00000024;
+    border-radius: $indent__l;
+
+  }
+
+  &__icon {
+    padding: $indent__base;
+    border-radius: $indent__s;
+
+    &--item {
+      width: 50px;
+      height: auto;
+    }
+  }
+
+  &__name {
+    font-size: $indent__xl;
+    font-weight: $weight__xl;
+  }
+
+  &__description {
+    font-size: 14px;
+    color: #666;
+  }
+
+  &__button {
+    @include buttonMain;
+  }
+}
+
+// Saved
+
+.saved {
+  padding: $indent__xl $indent__xxl;
+  background-color: $color-alabaster;
+
+  &__title {
+    font-size: $indent__l;
+    margin-bottom: $indent__l;
+    text-align: center;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: $indent__xl;
+  }
+
+  &__item {
+    width: 100%;
+    padding: $indent__xl;
+    @include flexcol;
+    align-items: center;
+    gap: $indent__l;
+    box-shadow: 0 0 20px 0px #00000024;
+    border-radius: $indent__l;
+    text-align: center;
+
+    @include responsive__tablet-big {
+      width: 25%;
+    }
+  }
+}

@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Monda:wght@400..700&display=swap');
+@import '../styles/mixins';
+
+// Spacing
+
+$indent__base: 16px;
+
+$indent__s: $indent__base / 2;
+$indent__l: $indent__base * 1.5;
+$indent__xl: $indent__base * 2;
+$indent__xxl: $indent__base * 3;
+
+
+// Fonts 
+
+$font-monda: "Monda", sans-serif;
+
+// Fonts Weight
+
+$weight__xs: 300;
+$weight__s: 400;
+$weight__l: 500;
+$weight__xl: 600;
+$weight__xxl: 700;
+
+// Breakpoints
+
+$breakpoint__tablet-big: 1230px;
+
+// Main Colors
+
+$color-alto: #DFDCDC;
+$color-white: #FFFFFF;
+$color-ebony-clay: #252641;
+$color-outer-space: #2D3436;
+$color-alabaster: #F7F7F7;
+
+// Courses Colors
+
+$color-fountain-blue: #49bbbd30;
+$color-cornflower-blue: #5B72EE30;
+$color-anakiwa: #9DCCFF30;
+$color-robins-egg-blue: #00CBB830;
+$color-tahiti-gold: #F48C0630;
+$color-burnt-sienna: #EE645B30;
+$color-ebony-clay-light: #25264130;
+$color-cobalt: #0036CB30;
+
+$colors: (
+    design: #49bbbd30,
+    development: #5B72EE30,
+    bank: #9DCCFF30,
+    business: #00CBB830,
+    marketing: #F48C0630,
+    photography: #EE645B30,
+    acting: #25264130,
+    science: #0036CB30
+);
+
+@each $color, $value in $colors {
+    .category__icon--#{$color} {
+        background-color: $value;
+        padding: $indent__base;
+        @include flexcol;
+        border-radius: $indent__s;
+    }
+}

@@ -1,0 +1,29 @@
+@mixin flexcol {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flexrow {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+// Buttons 
+
+@mixin buttonMain {
+    padding: 16px;
+    border-radius: 8px;
+    border: 0;
+    color: black;
+    background-color: rgb(231, 231, 231);
+    cursor: pointer;
+}
+
+// Responsive Page
+
+@mixin responsive__tablet-big {
+    @media screen and (min-width: $breakpoint__tablet-big) {
+        @content;
+    }
+}

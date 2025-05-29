@@ -1,0 +1,22 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.footer {
+    @include flexcol;
+    padding: $indent__xl;
+    margin-top: $indent__xl;
+    align-items: center;
+    gap: $indent__base;
+    color: $color-white;
+    background-color: $color-ebony-clay;
+
+    &__title {
+        display: flex;
+        align-items: center;
+        gap: $indent__base;
+
+        h3 {
+            text-transform: uppercase;
+        }
+    }
+}

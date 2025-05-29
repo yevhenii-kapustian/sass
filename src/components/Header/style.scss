@@ -1,0 +1,11 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.header {
+    @include flexrow;
+    padding: $indent__base;
+
+    a {
+        color: $color-outer-space;
+    }
+}
